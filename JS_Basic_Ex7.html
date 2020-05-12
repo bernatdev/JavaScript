@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercicis Javascript basic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici JavaScript Bàsic</title>
+    </head>
+
+    <body>
+
+        <b>Exercici 7:</b><br>
+        Donat el seguit llistat d’objectes ‘taula’, ‘cadira’, ‘ordinador’, ‘libreta’.<br>
+        Fer un bucle que mostri per pantalla cada objecte i la seva posició al llistat.<br><br>
+
+        <script>
+            var objectes = ["taula", "cadira", "ordinador", "llibreta"];
+            var i;
+            for (i = 0; i < objectes.length; i++) {
+                switch (objectes[i]) {
+                    case "taula":
+                        console.log("L'objecte taula es troba a la posició " + i);
+                        break;
+                    case "cadira":
+                        console.log("L'objecte cadira es troba a la posició " + i);
+                        break;
+                    case "ordinador":
+                        console.log("L'objecte ordinador es troba a la posició " + i);
+                        break;
+                    case "llibreta":
+                        console.log("L'objecte llibreta es troba a la posició " + i);
+                        break;
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

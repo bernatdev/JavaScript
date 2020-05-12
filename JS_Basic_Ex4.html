@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercicis Javascript basic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici JavaScript Bàsic</title>
+    </head>
+
+    <body>
+        <b>Exercici 4:</b><br>
+        Crea dos variables amb dos números i fes una suma entre ells.<br><br>
+
+        Introdueix el valor 1 <input type='number' id='valor1' /><br><br>
+        Introdueix el valor 2 <input type='number' id='valor2' /><br><br>
+
+        <input type='button' onclick='suma()' value='Suma' />
+
+        <script>
+            function suma() {
+                var valor1 = parseFloat(document.getElementById("valor1").value);
+                var valor2 = parseFloat(document.getElementById("valor2").value);
+                var suma = valor1 + valor2;
+                console.log("La suma de " + valor1 + " i " + valor2 + " resulta " + suma);
+            }
+        </script>
+
+    </body>
+</html>

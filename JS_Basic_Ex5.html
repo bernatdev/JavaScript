@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercicis Javascript basic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici JavaScript Bàsic</title>
+    </head>
+
+    <body>
+        <b>Exercici 5:</b><br>
+        Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat aprovat o no juntament
+        amb la nota. (caldrà utilitzar un condicional IF)<br><br>
+
+        Introdueix la nota <input type='number' id='nota_examen' /><br><br>
+        <input type='button' onclick='aprovador()' value='Aprovo?' />
+
+
+        <script>
+            function aprovador(){
+                var nota_examen = parseFloat(document.getElementById("nota_examen").value);
+                if (nota_examen >= 5) {
+                    alert("Has aprovat amb un " + nota_examen)
+                } else {
+                    alert("Has suspès amb un " + nota_examen)
+                }
+            }
+        </script>
+
+
+    </body>
+</html>

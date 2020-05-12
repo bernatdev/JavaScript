@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercicis Javascript basic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici JavaScript Bàsic</title>
+    </head>
+
+    <body>
+        <b>Exercici 8:</b><br>
+        Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1 i
+        valor2.
+        Estructura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrat per pantalla.
+
+        function calculadora( __ __ __){
+        ……...
+        }
+        <br><br>
+
+        Introdueix l'operador (+,-,*) <input type='text' id='simbol' /><br><br>
+        Introdueix el valor 1 <input type='number' id='valor1' /><br><br>
+        Introdueix el valor 2 <input type='number' id='valor2' /><br><br>
+
+        <input type='button' onclick='calculadora()' value='Activa la calculadora' />
+
+        <p id="demo"></p>
+
+        <script>
+            function calculadora() {
+                var simbol = document.getElementById("simbol").value;
+                var valor1 = parseFloat(document.getElementById("valor1").value);
+                var valor2 = parseFloat(document.getElementById("valor2").value);
+                var resultado;
+
+                if (isNaN(valor1) == true || isNaN(valor2) == true) {
+                    resultado = "Número no válido"
+                } else {
+                    switch (simbol) {
+                        case "+":
+                            resultado = valor1 + valor2;
+                            break;
+                        case "-":
+                            resultado = valor1 - valor2;
+                            break;
+                        case "*":
+                            resultado = valor1 * valor2;
+                            break;
+                        default:
+                            resultado = "Operador incorrecto"
+                    }
+                }
+                document.getElementById("demo").innerHTML = resultado;
+            }
+
+        </script>
+
+    </body>
+</html>

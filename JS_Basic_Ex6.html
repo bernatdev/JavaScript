@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercicis Javascript basic">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici JavaScript Bàsic</title>
+    </head>
+
+    <body>
+        <b>Exercici 6:</b><br>
+        Reemplaça la paraula blau per la paraula verd del següent text <u>Tinc un cotxe de color blau</u>. Després intenta
+        fer-ho, remplaçant les <u>o</u> per les <u>u</u><br><br>
+
+        <script>
+            var frase1 = "Tinc un cotxe de color blau";
+            var frase2 = frase1.replace("blau","verd"); 
+            console.log(frase2);
+            var frase3 = frase1.replace(/o/g,"u");
+            console.log(frase3);
+        </script>
+
+    </body>
+</html>
