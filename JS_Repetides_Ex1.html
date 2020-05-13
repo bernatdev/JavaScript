@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercici Lletres repetides">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici Lletres repetides</title>
+    </head>
+
+    <body>
+        <b>Exercici:</b><br>
+        L’exercici consisteix en mostrar per consola quantes vegades apareix cada lletra del teu nom i cognoms amb
+        diferents variants (fases).<br><br>
+        <b>FASE 1</b>
+        <ul>
+            <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+            <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li>
+        </ul>
+        <br><br>
+
+        Introdueix el nom <input type='text' id='nom' /><br><br>
+
+        <input type='button' onclick='creador()' value='Crea' />
+
+        <script>
+            function creador() {
+                var nom = (document.getElementById("nom").value).toUpperCase();
+                var nomvector = [];
+                for (var i=0; i<nom.length; i++) {
+                    nomvector.push(nom[i]);
+                    console.log(nom[i]);
+                }
+            }
+        </script>
+
+    </body>
+</html>

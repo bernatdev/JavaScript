@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercici Lletres repetides">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici Lletres repetides</title>
+    </head>
+
+    <body>
+        <b>Exercici:</b><br>
+        L’exercici consisteix en mostrar per consola quantes vegades apareix cada lletra del teu nom i cognoms amb
+        diferents variants (fases).<br><br>
+        <b>FASE 4</b>
+        <ul>
+            <li>Crea una altra llista amb el teu cognom on cada posició correspongui a una lletra</li>
+            <li>Fusiona les dues llistes en una sola. A més, afegeix una posició amb un espai buit entre la primera i la
+                segona. És a dir, partim de la llista name i surname i al acabar l’execució només tindrem una que es
+                dirà fullName</li>
+        </ul>
+        <br><br>
+        Introdueix el nom <input type='text' id='nom' /><br>
+        Introdueix el cognom <input type='text' id='cognom' /><br><br>
+        <input type='button' onclick='creador()' value='Crea!' />
+
+        <script>
+            function creador() {
+                var nom = (document.getElementById("nom").value).toUpperCase();
+                var cognom = (document.getElementById("cognom").value).toUpperCase();
+                var fullName = [];
+                var i;
+
+                for (i = 0; i < nom.length; i++) {
+                    fullName.push(nom[i]);
+                }
+
+                fullName.push(" ");
+
+                for (i = 0; i < cognom.length; i++) {
+                    fullName.push(cognom[i]);
+                }
+
+                console.log(fullName)
+            }
+        </script>
+
+
+    </body>
+
+</html>

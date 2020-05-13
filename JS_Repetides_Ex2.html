@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Exercici Lletres repetides">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercici Lletres repetides</title>
+    </head>
+
+    <body>
+        <b>Exercici:</b><br>
+        L’exercici consisteix en mostrar per consola quantes vegades apareix cada lletra del teu nom i cognoms amb
+        diferents variants (fases).<br><br>
+        <b>FASE 2</b>
+        <ul>
+            <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix:
+                ‘He trobat la CONSONANT: __’.</li>
+            <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’.</li>
+        </ul>
+        <br><br>
+        Introdueix el nom <input type='text' id='nom' /><br><br>
+        <input type='button' onclick='creador()' value='Crea' />
+
+        <script>
+            function creador() {
+                var nom = (document.getElementById("nom").value).toUpperCase();
+                console.log("Partim del nom "+ nom)
+                for (var i = 0; i < nom.length; i++) {
+                    if (isNaN(nom[i]) == true) {
+                        switch (nom[i]) {
+                            case "A":
+                            case "E":
+                            case "I":
+                            case "O":
+                            case "U":
+                                console.log("He trobat la vocal: " + nom[i])
+                                break;
+                            default:
+                                console.log("He trobat la consonant: " + nom[i])
+                        }
+                    } else {
+                        console.log("Els noms de persona no contenen el número: " + nom[i])
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>
