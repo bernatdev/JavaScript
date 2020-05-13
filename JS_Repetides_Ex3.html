@@ -24,27 +24,18 @@
 
         <script>
             function creador() {
-                var nom = (document.getElementById("nom").value).toUpperCase();
-                var array = [];
-                var i, j;
-                const map = new Map();
+               var myFullName = (document.getElementById("nom").value).toUpperCase();
+                const repetitions = new Map();
 
-                for (i = 0; i < nom.length; i++) {
-                    array.push(nom[i]);
-                }
-
-                for (i = 0; i < array.length; i++) {
-                    var contador = 1;
-                    for (j = i + 1; j < array.length; j++) {
-                        if (array[i] == array[j]) {
-                            contador = contador + 1;
-                            array.splice(j, 1);
-                            j = j - 1;
-                        }
+                for (var i = 0; i < myFullName.length; i++) {
+                    if (repetitions.has(myFullName[i])) {
+                        var valor = repetitions.get(myFullName[i]);
+                        repetitions.set(myFullName[i], valor + 1);
+                    } else {
+                        repetitions.set(myFullName[i], 1);
                     }
-                    map.set(array[i], contador);
                 }
-                console.log(map);
+                console.log(repetitions);
             }
 
         </script>
