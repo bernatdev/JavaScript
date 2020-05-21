@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Bernat Rovira">
+        <meta name="description" content="Rating">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Rating</title>
+        <style>
+            div {
+                text-align: center
+            }
+
+            p {
+                color: red;
+                display: inline;
+            }
+
+            .classepinta {
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <b>Exercici Rating</b>
+        <ol>
+            <li>Mostrar per pantalla 5 estrelles (o l’icona que més us agradi) centrades i amb un color assignat
+            </li>
+            <li>Canviar el color de l’estrella si el ratolí es posa sobre qualsevol d’elles</li>
+            <li>Al moure el ratolí sobre un element, que canviï els colors a tots els seus anteriors.
+                Si per exemple es posa el ratolí sobre la 3a estrella, s’han de canviar de color de la 1 a la 3.
+            </li>
+            <li>Al clicar sobre una estrella, s’han de quedar els colors fixes a aquesta i totes les anteriors</li>
+            <li>Si es prem sobre una altra estrella, els colors s’han d’actualitzar correctament.
+                A més, si l’usuari prem fora de la zona de les estrelles, s’han de deseleccionar totes.</li>
+        </ol>
+
+
+        <div>
+            <p class="unitat" id="heart0">&#10084;</p>
+            <p class="unitat" id="heart1">&#10084;</p>
+            <p class="unitat" id="heart2">&#10084;</p>
+            <p class="unitat" id="heart3">&#10084;</p>
+            <p class="unitat" id="heart4">&#10084;</p>
+            <br>
+            <p id="demo"></p>
+            <p id="demo2"></p>
+        </div>
+
+        <script>
+            var cor0 = document.getElementById("heart0");
+            var cor1 = document.getElementById("heart1");
+            var cor2 = document.getElementById("heart2");
+            var cor3 = document.getElementById("heart3");
+            var cor4 = document.getElementById("heart4");
+
+            cor0.addEventListener("mouseover", Pintar);
+            cor1.addEventListener("mouseover", Pintar);
+            cor2.addEventListener("mouseover", Pintar);
+            cor3.addEventListener("mouseover", Pintar);
+            cor4.addEventListener("mouseover", Pintar);
+
+            cor0.addEventListener("click", Pintar);
+            cor1.addEventListener("click", Pintar);
+            cor2.addEventListener("click", Pintar);
+            cor3.addEventListener("click", Pintar);
+            cor4.addEventListener("click", Pintar);
+            document.documentElement.addEventListener("click", Pintar);
+
+            function Pintar() {
+                var cor = event.target;
+                var i;
+                var cors = [cor0, cor1, cor2, cor3, cor4];
+
+                for (i = 4; i >= 0; i--) {
+                    cors[i].classList.remove("classepinta");
+                    cors[i].classList.remove("classefixa");
+                }
+
+                if (cor.tagName == "P") {
+                    for (i = cor.id[5]; i >= 0; i--) {
+                        cors[i].classList.add("classepinta");
+                    }
+                }
+            }
+
+            function Fixar() {
+                var cor = event.target;
+                var i;
+                var cors = [cor0, cor1, cor2, cor3, cor4];
+
+                for (i = cor.id[5]; i >= 0; i--) {
+                    cors[i].classList.add("classepinta");
+                }
+            }
+
+
+        </script>
+
+    </body>
+
+</html>
